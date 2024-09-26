@@ -226,7 +226,20 @@ public:
     ACCEL_RADIUS_LSB_ADDR = 0X67,
     ACCEL_RADIUS_MSB_ADDR = 0X68,
     MAG_RADIUS_LSB_ADDR = 0X69,
-    MAG_RADIUS_MSB_ADDR = 0X6A
+    MAG_RADIUS_MSB_ADDR = 0X6A,
+
+    /* Interrupt registers*/ 
+    INT_MASK_ADDR = 0X0F,
+    INT_ADDR = 0X10,
+    ACCEL_ANY_MOTION_THRES_ADDR = 0X11,
+    ACCEL_INTR_SETTINGS_ADDR = 0X12,
+    ACCEL_HIGH_G_DURN_ADDR = 0X13,
+    ACCEL_HIGH_G_THRES_ADDR = 0X14,
+    //masks to set specific axis to the interrupt functions
+    ACCEL_HIGH_G_X_AXIS_MSK = (0x20),
+    ACCEL_HIGH_G_Y_AXIS_MSK = (0x40),
+    ACCEL_HIGH_G_Z_AXIS_MSK = (0x80),
+    BNO055_ACC_CONFIG_ADDR = (0x08) //address of register to change operating      mode/bandwidth and G-range for acceleration
   } adafruit_bno055_reg_t;
 
   /** BNO055 power settings */
